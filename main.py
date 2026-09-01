@@ -27,7 +27,8 @@ if price_element is not None:
     if price <= target_price:
         print("Target price reached!")
     else:
-        print("The price is still above the target.")
+        difference = price - target_price
+        print(f"The price is R$ {difference:.2f} above the target.")
 
 else:
     print("Price not found.")
