@@ -24,9 +24,9 @@ def check_price(current_price, target_price):
         difference = price - target_price
         print(f"The price is R$ {difference:.2f} above the target.")
 
-## URL Teste
-url = "https://www.amazon.com.br/Marcador-Uni-Ball-58-9200-Multicor-Pacote/dp/B07S7K1JHZ"
-target_price = 160.00
+## URL custom
+url = input("Product URL: ")
+target_price = float(input("Target price: R$ "))
 
 price_text = get_price(url)
 
