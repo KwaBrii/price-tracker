@@ -1,6 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
 
+def get_price(url):
+    response = requests.ge(url)
+    soup = BeautifulSoup(response.text, "html.parser")
+    price_elemente = sou.find("span", class="a-offscreen")
+
+    if price_element is None:
+        return None
+    return price_element.text.strip()
+
 ## URL Teste
 url = "https://www.amazon.com.br/Marcador-Uni-Ball-58-9200-Multicor-Pacote/dp/B07S7K1JHZ"
 
